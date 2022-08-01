@@ -8,7 +8,7 @@ import { GET_ACTIVE_ITEMS } from "../constants/subGraphQueries";
 export default function Home() {
   const { isWeb3Enabled, account, chainId } = useMoralis();
   const chainIdStr = chainId ? parseInt(chainId).toString() : "31337";
-  const marketplaceAddress = networkMapping[chainIdStr]["NftMarketplace"][0];
+  const marketplaceAddress = networkMapping.chainIdStr?.NftMarketplace[0];
 
   const { loading, error, data: listedNfts } = useQuery(GET_ACTIVE_ITEMS);
 
